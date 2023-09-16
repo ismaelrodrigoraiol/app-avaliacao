@@ -44,7 +44,7 @@ section {
 
 h3 {
 	color: var(--escuro);
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 	margin-bottom: 0.5rem;
 }
@@ -81,13 +81,14 @@ h4 {
 }
 .create-todo .options label {
 	display: flex;
-	flex-direction: center;
-	align-items: baseline;
-	justify-content: auto;
+	flex-direction: auto;
+	align-items: center;
+	justify-content: left;
 	padding: auto;
-	margin: 30px;
-	width: 50% auto;
-	border-radius: 0rem;
+	background-color: #f1f1ff;
+	min-width: 50%;	
+	height: 50px;
+	border-radius: 0.5rem;
 	box-shadow: var(--shadow);
 	cursor: pointer;
 
@@ -95,11 +96,12 @@ h4 {
 
 .create-todo .options section {
 	display: flex;
-	margin-bottom: 1rem;
-	padding: 1rem;
+	margin-bottom: 0.5rem;
+	padding: 0.5rem;
 	background-color: #ffffff;
 	border-radius: 0.5rem;
 	box-shadow: var(--sombra);
+	
 }
 
 input[type="radio"],
@@ -140,9 +142,11 @@ input:checked ~ .bubble::after {
 
 .create-todo .options label div {
 	color: var(--escuro);
-	font-size: 1.125rem;
-	margin-top: 1rem;
-	padding: 1rem;
+	font-size: 1.25rem;
+	padding: 0.6rem;
+
+
+	
 	
 }
 

@@ -6,21 +6,21 @@ import Message from './components/Message.vue'
 import FooterView from './components/FooterView.vue'
 
 	const perguntas = ref([
-			//{
-			//id: "1",
-			//pergunta: "Qual seu grau de satisfação com o nosso atendimento?",
-			//opcoes: ["Bom", "Muito Bom", "Ruim"],
-			//},
-			//{
-			//id: "2",
-			//pergunta: "Como você descreveria a experiencia de comprar conosco?", 
-			//opcoes: ["Excelente", "Boa", "Descepcionente"],
-			//},
-			//{
-			//id: "3",
-			//pergunta: "Você voltaria a comprar conosco?", 
-			//opcoes: ["Sim", "Talvez", "Não"],
-			//},						
+			/*{
+			id: "1",
+			pergunta: "Qual seu grau de satisfação com o nosso atendimento?",
+			opcoes: ["Bom", "Muito Bom", "Ruim"],
+			},
+			{
+			id: "2",
+			pergunta: "Como você descreveria a experiencia de comprar conosco?", 
+			opcoes: ["Excelente", "Boa", "Descepcionente"],
+			},
+			{
+			id: "3",
+			pergunta: "Você voltaria a comprar conosco?", 
+			opcoes: ["Sim", "Talvez", "Não"],
+			},	*/					
 		]
 	)
 
@@ -92,9 +92,9 @@ onMounted(async() => {
 						<h4>Selecione sua resposta (Obrigatório*)</h4>
 
 					<div class="options">
-						<section>
-							<div v-for="(opcao, index) in pergunta.opcoes" :key="index"> {{ name }}
-								<label>						 
+						<section v-for="(opcao, index) in pergunta.opcoes" :key="index">							
+								<label>
+									<div>				 
 									<input
 										type="radio"
 										:name="category+pergunta.id"
@@ -102,9 +102,14 @@ onMounted(async() => {
 										:value="opcao"
 										v-model="input_respostas[pergunta.id]"/>
 									<span class="bubble"></span>
-									<div>{{ opcao }}</div>					
+									
+								</div>
+
+									<div>{{ opcao }}</div>
+								    
 								</label>
-							</div>
+							
+							
 						</section>
 					</div>
 				
